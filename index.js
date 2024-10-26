@@ -11,7 +11,9 @@ const genAI=new GoogleGenerativeAI("AIzaSyCHgCAYTd74BVucnjKCuyXtsOxRXxtYvbg")
 app.post('/gemini',async(req,res)=>{
     console.log(req.body.history)
     console.log(req.body.message)
-    const model=genAI.getGenerativeModel({model:"gemini-pro"})
+    const model=genAI.getGenerativeModel({model:"gemini-pro",tools:{
+        cors: true
+    }})
 const chat=model.startChat({
     history:req.body.history
 })
