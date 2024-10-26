@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 require('dotenv').config()
 const{GoogleGenerativeAI}=require('@google/generative-ai')
-const genAI=new GoogleGenerativeAI("AIzaSyCHgCAYTd74BVucnjKCuyXtsOxRXxtYvbg")
+const genAI=new GoogleGenerativeAI("AIzaSyD70xN6qsD450BG7y8lswMg43Q9-nM32do")
 
 app.post('/gemini',async(req,res)=>{
     console.log(req.body.history)
